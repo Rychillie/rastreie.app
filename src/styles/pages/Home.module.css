@@ -12,39 +12,33 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #111111;
+  border-top: 1px solid #b1b1b1;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.footer a {
+  margin-left: 0.25rem;
+  color: #70aaee;
+  font-weight: 600;
 }
 
 .footer img {
   margin-left: 0.5rem;
 }
 
-.footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer p a {
-  margin-left: 4px;
-}
-
-.footer p a:hover {
-  color: #0070f3;
-}
 
 .title a {
-  color: #0070f3;
+  color: #70aaee;
   text-decoration: none;
 }
 
@@ -71,11 +65,11 @@
 }
 
 .code {
-  background: #111111;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+  background    : #525252;
+  border-radius : 5px;
+  padding       : 0.25rem 0.5rem;
+  font-size     : 1.1rem;
+  font-family   : Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
@@ -86,40 +80,81 @@
   flex-wrap: wrap;
   max-width: 800px;
   margin-top: 3rem;
+  width: 100%;
+}
+
+.input input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #b1b1b1;
 }
 
 .card {
   margin: 1rem;
-  flex-basis: 45%;
+  flex-basis: 100%;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #111111;
+  border: 1px solid #686868;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 0 7px rgba(0,0,0,0.2);
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #70aaee;
+  border-color: #70aaee;
 }
 
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card h3 small {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6a6a6a;
+}
+
+.card > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  color: #6a6a6a;
+}
+
+.history h3 {
+  font-size: 1.2rem;
+  color: #6a6a6a;
+  font-weight: 400;
+}
+.history ul {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 1rem;
+  width: 100%;
+  padding: 0;
+}
+
+.history ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .card p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
+  color: #6a6a6a;
 }
 
 @media (max-width: 600px) {

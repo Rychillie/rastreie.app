@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid #fff;*/
+    width: 50%;
+    margin: 1rem auto;
+    background: rgba(220, 93, 93, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+}
+.container a {
+    margin-top: 1rem;
+    color: #6ca6e8;
+    text-decoration: underline;
+}
+.icon {
+    width: 4rem;
+    height: 4rem;
+    fill: #dc5d5d;
+    margin-bottom: 1rem;
+}
