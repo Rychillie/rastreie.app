@@ -11,32 +11,34 @@ export default function Home() {
   const [history, setHistory] = useHistoryState<string[]>([]);
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Rastreamento Correios</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <Header />
 
-        <div className={styles.grid}>
-          {history.length > 0 && (
-            <div className={styles.history}>
-              <h3>Histórico</h3>
-              <ul>
-                {history.map((h) => (
-                  <li key={h}>
-                    <Link href={`/track/${h}`}>{h}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </main>
+      <div className={styles.container}>
+        <main className={styles.main}>
+          <div className={styles.grid}>
+            {history.length > 0 && (
+              <div className={styles.history}>
+                <h3>Histórico</h3>
+                <ul>
+                  {history.map((h) => (
+                    <li key={h}>
+                      <Link href={`/track/${h}`}>{h}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </main>
+      </div>
 
       <Footer />
-    </div>
+    </>
   );
 }

@@ -1,6 +1,60 @@
+header.header {
+  background: #59975f;
+  padding: 20px 16px;
+  border-radius: 16px;
+  margin: 24px auto;
+  width: fit-content;
+}
+
+.banner {
+  margin: 0 24px;
+  width: fit-content;
+}
+
+.containerBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 24px 0 8px;
+}
+
+p.description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 auto 24px;
+  max-width: 270px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+input.input {
+  font-size: 14px;
+  line-height: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #3f3f3f;
+  border: 0;
+  width: 100%;
+  background: rgba(240, 240, 240, 0.64);
+  border-radius: 16px;
+}
+
+input.input::placeholder {
+  color: #3f3f3f;
+}
+
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +62,6 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -36,7 +89,6 @@
   margin-left: 0.5rem;
 }
 
-
 .title a {
   color: #70aaee;
   text-decoration: none;
@@ -46,12 +98,6 @@
 .title a:focus,
 .title a:active {
   text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
 }
 
 .title,
@@ -65,11 +111,11 @@
 }
 
 .code {
-  background    : #525252;
-  border-radius : 5px;
-  padding       : 0.25rem 0.5rem;
-  font-size     : 1.1rem;
-  font-family   : Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+  background: #525252;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
@@ -78,16 +124,8 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
   margin-top: 3rem;
   width: 100%;
-}
-
-.input input {
-  padding: 0.5rem 0.75rem;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  border: 1px solid #b1b1b1;
 }
 
 .card {
@@ -100,7 +138,7 @@
   border: 1px solid #686868;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  box-shadow: 0 0 7px rgba(0,0,0,0.2);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover,
@@ -112,13 +150,13 @@
 
 .card h3 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
 }
 
 .card h3 small {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #6a6a6a;
 }
@@ -139,7 +177,7 @@
   list-style: none;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
   padding: 0;
@@ -157,9 +195,20 @@
   color: #6a6a6a;
 }
 
-@media (max-width: 600px) {
-  .grid {
+@media (min-width: 600px) {
+  header.header {
     width: 100%;
-    flex-direction: column;
+    max-width: 800px;
+  }
+
+  input.input {
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .banner {
+    margin: 0 auto;
+    width: fit-content;
   }
 }
